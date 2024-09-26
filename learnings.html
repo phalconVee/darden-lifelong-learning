@@ -194,18 +194,14 @@
             <div class="card">
 							<div class="card-body flex flex-col gap-6">
 								<h6 class="text-lg text-gray-600 font-semibold">Learnings</h6>
-                <!-- <p class="text-sm">Product Management Module</p> -->
-                <!-- <div class="bg-cyan-400 border text-sm text-cyan-500 rounded-md p-4" role="alert">
-                  <span class="font-bold">Completion Rate:</span> You have completed 23% of the Product Management module.
-                </div> -->
 
-                <div class="flex items-center p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400" role="alert">
-                  <svg class="flex-shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
-                  </svg>
-                  <span class="sr-only">Info</span>
-                  <div>
-                    <span class="font-bold">Completion Rate:</span> You have completed 23% of the Product Management module.
+                <div class="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md" role="alert">
+                  <div class="flex">
+                    <div class="py-1"><svg class="fill-current h-6 w-6 text-teal-500 mr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z"/></svg></div>
+                    <div>
+                      <p class="font-bold">Progress Report on Completion</p>
+                      <p class="text-sm">You have completed 23% of the Product Management module.</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -232,7 +228,7 @@
                     <div class="p-4 rounded-lg dark:bg-gray-800" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                       <div class="flex flex-col md:flex-row">
                         
-                        <div class="card overflow-hidden mr-2">
+                        <div class="card overflow-hidden mr-4" onclick="toggleModal()" style="cursor: pointer;">
                           <div class="bg-white">
                               <img class="max-w-xl h-auto rounded-t-xl" src="assets/images/courses/pm-img-1.jpg" alt="Image Description">
                           </div>                                                
@@ -241,14 +237,17 @@
                         <div class="max-w-md">
                           <h3 class="font-bold text-xl">Digital Product Management</h3>
                           <h6 class="text-darden">Alex Cowan</h6>
-                          <p>Implement a modern approach to product management. Master the fundamentals that create great teams and products</p>
+                          <p class="text-gray-500">Implement a modern approach to product management. Master the fundamentals that create great teams and products</p>
+                          <button class="block text-sm px-5 py-2.5 text-center rounded-lg bg-darden text-white rounded hover:bg-offwhite transition font-medium duration-500" onclick="toggleModal()" type="button">
+                            Preview Course
+                          </button>
                         </div>
                       
                        </div>
 
                        <div class="flex flex-col md:flex-row mt-4">
                         
-                        <div class="card overflow-hidden mr-2">
+                        <div class="card overflow-hidden mr-4" onclick="toggleModal()" style="cursor: pointer;">
                           <div class="bg-white">
                               <img class="max-w-xl h-auto rounded-t-xl" src="assets/images/courses/pm-img-2.jpg" alt="Image Description">
                           </div>                                                
@@ -257,10 +256,34 @@
                         <div class="max-w-md">
                           <h3 class="font-bold text-xl">Design Thinking & UX</h3>
                           <h6 class="text-darden">Jose Terrazas</h6>
-                          <p>Crash course on how best to go through the design phase of a digital product.</p>
+                          <p class="text-gray-500">Crash course on how best to go through the design phase of a digital product.</p>
+                          <button class="block text-sm px-5 py-2.5 text-center rounded-lg bg-darden text-white rounded hover:bg-offwhite transition font-medium duration-500" onclick="toggleModal()" type="button">
+                            Preview Course
+                          </button>
                         </div>
                       
                        </div>
+
+                       <div class="flex flex-col md:flex-row mt-4">
+                        
+                        <div class="card overflow-hidden mr-4" onclick="toggleModal()" style="cursor: pointer;">
+                          <div class="bg-white">
+                              <img class="max-w-xl h-auto rounded-t-xl" src="assets/images/courses/pm-img-3.jpg" alt="Image Description">
+                          </div>                                                
+                        </div>
+
+                        <div class="max-w-md">
+                          <h3 class="font-bold text-xl">Product Ideation, Design, and Management Specialization</h3>
+                          <h6 class="text-darden">Ivan Gonzalez</h6>
+                          <p class="text-gray-500">Learn to discover, design, and deliver products that customers love.</p>
+                          <button class="block text-sm px-5 py-2.5 text-center rounded-lg bg-darden text-white hover:bg-offwhite transition font-medium duration-500" onclick="toggleModal()" type="button">
+                            Preview Course
+                          </button>
+                          
+                        </div>
+                      
+                       </div>
+
                     </div>
                     <div class="bg-gray-50 p-4 rounded-lg dark:bg-gray-800 hidden" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
                         <p class="text-gray-500 dark:text-gray-400 text-sm">Related course content goes here.</p>
@@ -280,6 +303,24 @@
 						</div>
 					</div>
 
+            <!-- Main modal -->
+            <div class="fixed z-10 overflow-y-auto top-0 w-full left-0 hidden" id="modal">
+              <div class="flex items-center justify-center min-height-100vh pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+                <div class="fixed inset-0 transition-opacity">
+                  <div class="absolute inset-0 bg-gray-900 opacity-75" />
+                </div>
+                <span class="hidden sm:inline-block sm:align-middle sm:h-screen">&#8203;</span>
+                <div class="inline-block align-center bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+                  <div class="relative" style="padding-top: 56.25%">
+                    <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/UC7QgM7kj48?si=C4mYqEv3mGeiqjxY" frameborder="0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  </div>
+                  <div class="bg-gray-200 px-4 py-3 text-right">
+                    <button type="button" class="block py-2 px-4 bg-gray-500 font-medium text-white rounded-lg hover:bg-gray-700 mr-2" onclick="toggleModal()"><i class="fas fa-times"></i> Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Modal -->
 
 				</main>
 				<!-- Main Content End -->
@@ -289,16 +330,20 @@
 		<!--end of project-->
 	</main>
 
-
 	
-<script src="../assets/libs/jquery/dist/jquery.min.js"></script>
-<script src="../assets/libs/simplebar/dist/simplebar.min.js"></script>
-<script src="../assets/libs/iconify-icon/dist/iconify-icon.min.js"></script>
-<script src="../assets/libs/@preline/dropdown/index.js"></script>
-<script src="../assets/libs/@preline/overlay/index.js"></script>
-<script src="../assets/js/sidebarmenu.js"></script>
+<script src="assets/libs/jquery/dist/jquery.min.js"></script>
+<script src="assets/libs/simplebar/dist/simplebar.min.js"></script>
+<script src="assets/libs/iconify-icon/dist/iconify-icon.min.js"></script>
+<script src="assets/libs/@preline/dropdown/index.js"></script>
+<script src="assets/libs/@preline/overlay/index.js"></script>
+<script src="assets/js/sidebarmenu.js"></script>
 <script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
 
+<script type="text/javascript">
+  function toggleModal() { 
+    document.getElementById('modal').classList.toggle('hidden')
+  }
+</script>
 </body>
 
 </html>
