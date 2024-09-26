@@ -2171,3 +2171,9 @@ iframe{
     }
 
 }
+
+
+dark [role=tab].active, .dark [role=tab].active:hover, [role=tab].active, [role=tab].active:hover {
+  border-color: rgb(249 156 48 / var(--tw-bg-opacity)) !important;
+  color: rgb(249 156 48 / var(--tw-bg-opacity)) !important;
+}
